@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "zad3";
+}
+<html>
+
+    <ul>
+        <li><a href="/date">Date</a></li>
+        <li><a href="/hangman">Hangman</a></li>
+    </ul>
+
+    <form method="post" action="/hangman">
+    <input type="text" id="operand1" name="operand1">
+    <input type="submit" value="Submit">
+    Input example: operand1=Ц 
+    </form>
+
+</html>
