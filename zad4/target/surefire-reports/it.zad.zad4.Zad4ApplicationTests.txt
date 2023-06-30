@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: it.zad.zad4.Zad4ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.175 s - in it.zad.zad4.Zad4ApplicationTests

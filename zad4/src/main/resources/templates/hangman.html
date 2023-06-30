@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+</head>
+<body>
+<span style="float: right;">
+        <span th:text="${session.username}"></span> - <span th:text="${session.role}"></span>
+    </span>
+
+<form id="CGI, Java, DotNet" action="/hangman" method="post">
+    hangmanCgi <input type="radio" value="hangman.cgi" name="option" required><br>
+    hangmanSpring <input type="radio" value="hangman Spring" name="option"><br>
+    hangmanNET <input type="radio"  value="hangman .NET" name="option"><br>
+    <br>
+    How would you like to send the request as?<br>
+    GET <input type="radio" name="type" value="GET" required><br>
+    POST <input type="radio" name="type" value="POST"><br>
+
+
+    Insert the name of the parameter: <input type="text" name="paramName"><br>
+    Insert the value of the parameter: <input type="text" name="paramValue"><br>
+
+    <input type="submit" id="dateSubmit" value="hangmanSubmit"><br>
+    <input type="button" id="dateDelete" value="Cancel" onclick="remove()">
+</form>
+
+<span th:text="${scrapedData}"></span>
+
+</body>
+
+<script>
+    function remove(){
+        document.getElementsByName('option').forEach(x=>x.checked=false)
+        document.getElementsByName('type').forEach(x=>x.checked=false)
+    }
+</script>
+
+</html>
