@@ -1,0 +1,26 @@
+
+<p style="float:right;">@Model.name - @Model.role<p>
+
+<form id="CGI, Java, DotNet" action="/date" method="post">
+    dateCgi <input type="radio" value="date.cgi" name="option" required><br>
+    dateSpring <input type="radio" value="date Spring" name="option"><br>
+    dateNET <input type="radio"  value="date .NET" name="option"><br>
+
+    Insert the name of the parameter: <input type="text" name="paramName"><br>
+    Insert the value of the parameter: <input type="text" name="paramValue"><br>
+
+    <input type="submit" id="dateSubmit" value="Submit"><br>
+    <input type="button" id="dateDelete" value="Cancel" onclick="remove()">
+</form>
+
+@if (!string.IsNullOrEmpty(Model.scrapedData)){
+    <p>@Model.scrapedData</p>
+}
+
+<script>
+    function remove(){
+        document.getElementsByName('option').forEach(x=>x.checked=false)
+        document.getElementsByName('paramName')[0].value="";
+        document.getElementsByName('paramValue')[0].value="";
+    }
+</script>
